@@ -1,5 +1,3 @@
 markdown: redcarpet
 baseurl: /dawndaria
 exclude: ['README.md']
-
-theme: jekyll-theme-modernist
