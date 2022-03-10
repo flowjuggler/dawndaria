@@ -3,4 +3,23 @@ layout: default
 ---
 
 <h1>Home</h1>
-<p>Hello World.</p>
+<h2>Recent Posts</h2>
+
+<ol>
+	{% for services in site.data.content-type %}
+	<li>
+	  <a href="{{site.baseurl}}/services/{{services.folder}}/">{{services.title}}</a>
+	  {{services.content | markdownify }}
+	</li>
+	{% endfor %}
+</ol>
+
+
+<ul>
+{% for news in site.posts limit:2 %}
+  <li>
+    <a href="">{{news.title}}</a>
+	<p>{{news.meta}}</p>
+  </li>
+ {% endfor %}
+</ul>
